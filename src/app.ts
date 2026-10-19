@@ -3,6 +3,7 @@ import todoRoutes from "./routes/todos";
 
 const app = express();
 
+app.use(express.json());
 app.use('/todos', todoRoutes);
 
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
